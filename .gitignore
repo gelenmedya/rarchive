@@ -1,0 +1,9 @@
+target/
+Cargo.lock
+# third-party test corpora: not redistributed here (see the README in each folder)
+tests/data/winrar/*
+!tests/data/winrar/README.md
+tests/data/unrar-rs/*
+!tests/data/unrar-rs/README.md
+tests/data/rar4/real/*
+!tests/data/rar4/real/PROVENANCE.md

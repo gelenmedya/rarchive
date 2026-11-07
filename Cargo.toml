@@ -1,0 +1,28 @@
+[package]
+name = "rarchive"
+description = "Fast, unobtrusive pure-Rust archive reader (RAR 1.5-5, ZIP, 7z)"
+repository = "https://github.com/gelenmedya/rarchive"
+readme = "README.md"
+keywords = ["rar", "zip", "7z", "archive", "unrar"]
+categories = ["compression", "encoding"]
+version = "0.0.1"
+edition = "2024"
+license = "MIT"
+publish = false
+
+[dependencies]
+bzip2 = "0.6"
+deflate64 = "0.1"
+ppmd-rust = "1"
+lzma-rust2 = { version = "0.25", default-features = false, features = ["std", "xz", "optimization"] }
+sha1 = "0.10"
+zstd = { version = "0.14", default-features = false }
+aes = "0.8"
+crc32fast = "1"
+hmac = "0.12"
+sha2 = "0.10"
+flate2 = { version = "1.1", default-features = false, features = ["zlib-rs"] }
+
+[[bin]]
+name = "rarchive"
+path = "src/bin/rarchive.rs"
