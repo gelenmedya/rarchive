@@ -1,5 +1,7 @@
 # rarchive
 
+[![crates.io](https://img.shields.io/crates/v/rarchive.svg)](https://crates.io/crates/rarchive) [![docs.rs](https://img.shields.io/docsrs/rarchive)](https://docs.rs/rarchive) [![license](https://img.shields.io/crates/l/rarchive.svg)](LICENSE)
+
 A pure-Rust archive reader for RAR, ZIP and 7z, built to be fast and to stay out of the way.
 Independent members, and independent blocks inside big RAR 5 and LZMA2 streams, decode in
 parallel at low priority and within a memory budget, so a large extraction doesn't make the
@@ -33,14 +35,19 @@ the archives in the OS file cache:
 | 400 MB archive, 520 files | 1.03 s | 0.57 s | 0.063 s (16×) |
 
 UnRAR is multi-threaded too; rarchive also spends less CPU time in total on the same work.
-Method, CPU and memory figures, and stutter measurements: [docs/olcumler.md](docs/olcumler.md)
-(in Turkish).
+Method, CPU and memory figures, and stutter measurements: [docs/benchmarks.md](docs/benchmarks.md).
 
 ## Use
 
+```sh
+cargo add rarchive
+```
+
+or in `Cargo.toml`:
+
 ```toml
 [dependencies]
-rarchive = { git = "https://github.com/gelenmedya/rarchive" }
+rarchive = "0.1"
 ```
 
 Extraction goes through a `Sink`: you decide where each member's bytes go.
@@ -93,5 +100,5 @@ Developed and tuned on Windows; the code has non-Windows fallbacks but is not te
 
 ## License
 
-MIT, see [LICENSE](LICENSE). The research notes in [docs](docs) (in Turkish) list the public
-sources the decoders were written from.
+MIT, see [LICENSE](LICENSE). The research notes in [docs/research.md](docs/research.md) list the
+public sources the decoders were written from.

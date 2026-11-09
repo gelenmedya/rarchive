@@ -2,10 +2,11 @@
 name = "rarchive"
 description = "Fast, unobtrusive pure-Rust archive reader (RAR 1.5-5, ZIP, 7z)"
 repository = "https://github.com/gelenmedya/rarchive"
+documentation = "https://docs.rs/rarchive"
 readme = "README.md"
 keywords = ["rar", "zip", "7z", "archive", "unrar"]
 categories = ["compression", "encoding"]
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 license = "MIT"
 rust-version = "1.85"
