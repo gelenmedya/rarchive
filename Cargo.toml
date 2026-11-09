@@ -5,10 +5,12 @@ repository = "https://github.com/gelenmedya/rarchive"
 readme = "README.md"
 keywords = ["rar", "zip", "7z", "archive", "unrar"]
 categories = ["compression", "encoding"]
-version = "0.0.1"
+version = "0.1.0"
 edition = "2024"
 license = "MIT"
-publish = false
+rust-version = "1.85"
+# the crate: code, README and license (the test archives and design notes stay in the repo)
+include = ["src/**/*", "README.md", "LICENSE", "Cargo.toml"]
 
 [dependencies]
 bzip2 = "0.6"
